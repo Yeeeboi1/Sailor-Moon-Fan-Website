@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Magical floating background -->
+    <div class="magical-bg" id="magicalBg"></div>
+
+    <!-- ============================================ -->
+    <!-- HEADER SECTION START -->
+    <!-- ============================================ -->
+    <header>
+        <div class="wave-top"></div>
+        <div class="header-inner">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div style="position: relative;">
+                        <div class="sparkle-container">
+                            <span class="sparkle-orbit">💫</span>
+                            <span class="sparkle-orbit">⭐</span>
+                            <span class="sparkle-orbit">✨</span>
+                        </div>
+                        <div class="moon-icon">🌙</div>
+                    </div>
+                    <h1 class="site-name">SAILOR MOON</h1>
+                </div>
+
+                <nav>
+                    <a href="home.htm" class="nav-link" data-character="sailor-moon">
+                        🏠 Home
+                    </a>
+                    <a href="overview.html" class="nav-link" data-character="sailor-mercury">
+                        📖 Overview
+                    </a>
+                    <a href="highlights.html" class="nav-link" data-character="sailor-mars">
+                        ⭐ Highlights
+                    </a>
+                    <a href="media.html" class="nav-link" data-character="sailor-jupiter">
+                        🎬 Media
+                    </a>
+                    <a href="contact.html" class="nav-link" data-character="sailor-venus">
+                        💌 Contact
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============================================ -->
+    <!-- HEADER SECTION END -->
+    <!-- ============================================ -->
+
+    <!-- ============================================ -->
+    <!-- HOME SECTION START -->
+    <!-- ============================================ -->
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <div class="moon-icon-large">🌙</div>
+            <h2 class="hero-title">Sailor Moon</h2>
+            <p class="hero-quote">"In the name of the moon, I will punish you!"</p>
+            <p class="hero-quote">"月に変わってお仕置きよ"</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <p class="intro-label">Sailor Moon</p>
+            <h3 class="intro-title">Welcome to the Sailor Moon Website</h3>
+            <p class="intro-text">Sailor Moon is a classic magical girl anime series created by Naoko Takeuchi that follows Usagi Tsukino, an ordinary teenage girl who transforms into Sailor Moon to protect the world from evil forces. Blending action, friendship, romance, and fantasy, the series has become a global icon known for its empowering themes and memorable characters.
+
+On this website, visitors can explore character profiles, story arcs, transformations, villains, and key moments from the Sailor Moon universe, along with fun facts, images, and insights for both new fans and longtime followers. 🌙✨</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- HOME SECTION END -->
+    <!-- ============================================ -->
+
+
+
+        <!-- ============================================ -->
+    <!-- FOOTER SECTION START -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-section">
+                <h3 class="social-title">Connect With Us!</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sailorfanclub" class="social-icon social-facebook" title="Facebook">📘</a>
+                    <a href="https://x.com/Ochibawolf" class="social-icon social-twitter" title="Twitter">🐦</a>
+                    <a href="https://www.instagram.com/sailormoon_sc/" class="social-icon social-instagram" title="Instagram">📷</a>
+                    <a href="https://www.youtube.com/@sailormoonofficialch" class="social-icon social-youtube" title="YouTube">📺</a>
+                    <a href="https://sailormoon-official.com/" class="social-icon social-website" target="_blank">🌐</a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <a href="home.htm" class="footer-link">Home</a>
+                <a href="overview.html" class="footer-link">Overview</a>
+                <a href="highlights.html" class="footer-link">Highlights</a>
+                <a href="media.html" class="footer-link">Media</a>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="newsletter-section">
+                <h4>Stay Magical! 💌</h4>
+                <p>Subscribe for Sailor Moon updates!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+                    <button type="submit" class="newsletter-button">Subscribe ✨</button>
+                </form>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright-section">
+                <p>© 2026 Sailor Moon Fan Website. All Rights Reserved.</p>
+                <p>Made with <span style="color: #ff6fb5;">💖</span> for fans worldwide</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION END -->
+    <!-- ============================================ -->
+
+    
+    <script>
+        // Create floating hearts, stars, and moons
+        const magicalBg = document.getElementById('magicalBg');
+        const items = ['💖', '⭐', '✨', '🌙', '💫', '🌟'];
+        
+        function createFloatingItem() {
+            const item = document.createElement('div');
+            item.className = 'float-item';
+            item.textContent = items[Math.floor(Math.random() * items.length)];
+            item.style.left = Math.random() * 100 + '%';
+            item.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            item.style.animationDelay = Math.random() * 5 + 's';
+            magicalBg.appendChild(item);
+            
+            setTimeout(() => item.remove(), 13000);
+        }
+        
+        setInterval(createFloatingItem, 2000);
+        
+        // Create initial items
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createFloatingItem, i * 400);
+        }
+
+        // Header background change on hover
+        const header = document.querySelector('header');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                const character = this.getAttribute('data-character');
+                header.className = character + '-bg';
+            });
+
+            link.addEventListener('mouseleave', function() {
+                header.className = '';
+            });
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! 🌙✨');
+            this.reset();
+        });
+
+        
+        // 3. Social Icon Animation (Links will now work!)
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                // We removed e.preventDefault() so the links trigger naturally
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 10);
+            });
+        });
+    </script>
+    
+</body>
+</html>
+    
