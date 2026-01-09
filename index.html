@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="indexCss.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="preloader" id="preloader">
+        <div class="animation-container">
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            
+            <div class="image-wrapper left">
+                <div class="trail trail-1"></div>
+                <div class="trail trail-2"></div>
+                <div class="trail trail-3"></div>
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+                <img src="pre/2.png" 
+                     alt="Sailor Moon Left" 
+                     class="slide-image left"
+                     id="leftImage">
+            </div>
+            
+            <div class="image-wrapper right">
+                <div class="trail trail-1"></div>
+                <div class="trail trail-2"></div>
+                <div class="trail trail-3"></div>
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+                <img src="pre/moon.png" 
+                     alt="Sailor Moon Right" 
+                     class="slide-image right"
+                     id="rightImage">
+            </div>
+            
+            <button class="enter-button" id="enterButton">✨ Enter Website ✨</button>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <!-- Copy ALL your existing website content here -->
+        <!-- Everything from your body tag should go inside this div -->
+    </div>
+
+    <script>
+        // Handle button click - redirect to home page
+        document.getElementById('enterButton').addEventListener('click', function() {
+            const preloader = document.getElementById('preloader');
+            
+            // Add fade out effect
+            preloader.style.opacity = '0';
+            
+            // Redirect to home page after animation
+            setTimeout(() => {
+                window.location.href = 'home.htm'; // Change this to your home page filename
+            }, 500);
+        });
+
+        // Optional: Change images by clicking on them
+        document.getElementById('leftImage').addEventListener('click', function() {
+            const newSrc = prompt('Enter image URL for left image:');
+            if (newSrc) {
+                this.src = newSrc;
+            }
+        });
+
+        document.getElementById('rightImage').addEventListener('click', function() {
+            const newSrc = prompt('Enter image URL for right image:');
+            if (newSrc) {
+                this.src = newSrc;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffc3e1 0%, #ffd6f0 50%, #e6d5ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 700px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 280px;
+            height: 420px;
+        }
+
+        .slide-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(255, 110, 199, 0.5);
+            transform: translateY(150vh);
+            z-index: 10;
+        }
+
+        .slide-image.left {
+            animation: slideUpVertical 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .slide-image.right {
+            animation: slideUpVertical 2s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+        }
+
+        @keyframes slideUpVertical {
+            0% {
+                transform: translateY(150vh);
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Trail effects */
+        .trail {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .trail-1 {
+            background: linear-gradient(to top, rgba(255, 110, 199, 0.4), transparent);
+            animation: trail1 2s ease-out forwards;
+        }
+
+        .trail-2 {
+            background: linear-gradient(to top, rgba(186, 85, 211, 0.3), transparent);
+            animation: trail2 2s ease-out 0.1s forwards;
+        }
+
+        .trail-3 {
+            background: linear-gradient(to top, rgba(138, 43, 226, 0.2), transparent);
+            animation: trail3 2s ease-out 0.2s forwards;
+        }
+
+        .image-wrapper.right .trail-1 {
+            animation: trail1 2s ease-out 0.4s forwards;
+        }
+
+        .image-wrapper.right .trail-2 {
+            animation: trail2 2s ease-out 0.5s forwards;
+        }
+
+        .image-wrapper.right .trail-3 {
+            animation: trail3 2s ease-out 0.6s forwards;
+        }
+
+        @keyframes trail1 {
+            0% {
+                transform: translateY(150vh) scaleY(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scaleY(3);
+                opacity: 0;
+            }
+        }
+
+        @keyframes trail2 {
+            0% {
+                transform: translateY(150vh) scaleY(1.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scaleY(3.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes trail3 {
+            0% {
+                transform: translateY(150vh) scaleY(2);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scaleY(4);
+                opacity: 0;
+            }
+        }
+
+        /* Particle trails */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .image-wrapper.left .particle {
+            animation: particleRise 1.5s ease-out forwards;
+        }
+
+        .image-wrapper.right .particle {
+            animation: particleRise 1.5s ease-out 0.4s forwards;
+        }
+
+        @keyframes particleRise {
+            0% {
+                transform: translateY(600px) scale(0);
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .particle:nth-child(1) { left: 20%; animation-delay: 0.1s; }
+        .particle:nth-child(2) { left: 40%; animation-delay: 0.2s; }
+        .particle:nth-child(3) { left: 60%; animation-delay: 0.15s; }
+        .particle:nth-child(4) { left: 80%; animation-delay: 0.25s; }
+        .particle:nth-child(5) { left: 30%; animation-delay: 0.3s; }
+        .particle:nth-child(6) { left: 70%; animation-delay: 0.35s; }
+
+        .image-wrapper.right .particle:nth-child(1) { animation-delay: 0.5s; }
+        .image-wrapper.right .particle:nth-child(2) { animation-delay: 0.6s; }
+        .image-wrapper.right .particle:nth-child(3) { animation-delay: 0.55s; }
+        .image-wrapper.right .particle:nth-child(4) { animation-delay: 0.65s; }
+        .image-wrapper.right .particle:nth-child(5) { animation-delay: 0.7s; }
+        .image-wrapper.right .particle:nth-child(6) { animation-delay: 0.75s; }
+
+        .enter-button {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            padding: 18px 60px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #ff6ec7 0%, #ff8fd8 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 110, 199, 0.5);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: buttonAppear 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2.5s forwards;
+        }
+
+        @keyframes buttonAppear {
+            0% {
+                transform: translateX(-50%) scale(0) translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-50%) scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .enter-button:hover {
+            transform: translateX(-50%) scale(1.08);
+            box-shadow: 0 15px 40px rgba(255, 110, 199, 0.7);
+        }
+
+        .enter-button:active {
+            transform: translateX(-50%) scale(0.95);
+        }
+
+        .main-content {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .main-content.active {
+            display: block;
+        }
+
+        /* Sparkle effects */
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+            animation: sparkleAnimation 2s infinite;
+        }
+
+        @keyframes sparkleAnimation {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+
+        .sparkle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 35%; right: 15%; animation-delay: 0.5s; }
+        .sparkle:nth-child(3) { bottom: 25%; left: 20%; animation-delay: 1s; }
+        .sparkle:nth-child(4) { top: 55%; right: 10%; animation-delay: 1.5s; }
+        .sparkle:nth-child(5) { top: 70%; left: 15%; animation-delay: 0.8s; }
+        .sparkle:nth-child(6) { bottom: 40%; right: 25%; animation-delay: 1.3s; }
