@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="overviewStyles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+       <!-- Magical floating background -->
+    <div class="magical-bg" id="magicalBg"></div>
+
+    <!-- ============================================ -->
+    <!-- HEADER SECTION START -->
+    <!-- ============================================ -->
+    <header>
+        <div class="wave-top"></div>
+        <div class="header-inner">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div style="position: relative;">
+                        <div class="sparkle-container">
+                            <span class="sparkle-orbit">💫</span>
+                            <span class="sparkle-orbit">⭐</span>
+                            <span class="sparkle-orbit">✨</span>
+                        </div>
+                        <div class="moon-icon">🌙</div>
+                    </div>
+                    <h1 class="site-name">SAILOR MOON</h1>
+                </div>
+
+                <nav>
+                    <a href="home.htm" class="nav-link" data-character="sailor-moon">
+                        🏠 Home
+                    </a>
+                    <a href="overview.html" class="nav-link" data-character="sailor-mercury">
+                        📖 Overview
+                    </a>
+                    <a href="highlights.html" class="nav-link" data-character="sailor-mars">
+                        ⭐ Highlights
+                    </a>
+                    <a href="media.html" class="nav-link" data-character="sailor-jupiter">
+                        🎬 Media
+                    </a>
+                    <a href="contact.html" class="nav-link" data-character="sailor-venus">
+                        💌 Contact
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ============================================ -->
+    <!-- HEADER SECTION END -->
+    <!-- ============================================ -->
+ <!-- ============================================ -->
+    <!-- PROFILE CONTAINER START -->
+    <!-- ============================================ -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>✨ Character Profiles ✨</h1>
+            <p>Select a Sailor Scout to view their profile</p>
+            
+            <!-- Character Selection Buttons -->
+            <div class="character-selector">
+                <button class="character-btn active" data-character="moon">🌙 Sailor Moon</button>
+                <button class="character-btn" data-character="mercury">💧 Sailor Mercury</button>
+                <button class="character-btn" data-character="mars">🔥 Sailor Mars</button>
+                <button class="character-btn" data-character="jupiter">⚡ Sailor Jupiter</button>
+                <button class="character-btn" data-character="venus">💖 Sailor Venus</button>
+                <button class="character-btn" data-character="chibi">🌸 Sailor Chibi Moon</button>
+                <button class="character-btn" data-character="uranus">🌀 Sailor Uranus</button>
+                <button class="character-btn" data-character="neptune">🌊 Sailor Neptune</button>
+                <button class="character-btn" data-character="pluto">⏰ Sailor Pluto</button>
+                <button class="character-btn" data-character="saturn">🪐 Sailor Saturn</button>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- PROFILE CONTENT START -->
+        <!-- ============================================ -->
+        <div class="profile-content">
+            <div class="character-image-section">
+                <!-- Character Image Display -->
+                <div class="character-image-label">CHARACTER IMAGE</div>
+                <div class="character-image-container">
+                    <img id="characterImage" class="character-image" src="https://via.placeholder.com/250/ff6fb5/ffffff?text=🌙" alt="Character Portrait">
+                </div>
+                <div class="character-name" id="characterName">Sailor Moon</div>
+            </div>
+
+            <div class="profile-info">
+                <!-- Origin & Background Section -->
+                <div class="info-section">
+                    <h2>Origin & Background</h2>
+                    <p id="originText">Usagi Tsukino is an ordinary teenage girl who discovers she is the reincarnation of Princess Serenity. She transforms into Sailor Moon, the champion of justice, to protect Earth from evil forces.</p>
+                </div>
+
+                <!-- Character Abilities Section -->
+                <div class="info-section">
+                    <h2>Character Abilities</h2>
+                    <ul id="abilitiesList">
+                        <li>Moon Prism Power transformation</li>
+                        <li>Moon Tiara Action attack</li>
+                        <li>Healing powers</li>
+                    </ul>
+                </div>
+
+                <!-- Profile Stats Section -->
+                <div class="info-section">
+                    <h2>Profile Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">Planet:</div>
+                            <div class="stat-value" id="statPlanet">Moon</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Weapon:</div>
+                            <div class="stat-value" id="statWeapon">Moon Stick</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Element:</div>
+                            <div class="stat-value" id="statElement">Love & Justice</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Color:</div>
+                            <div class="stat-value" id="statColor">Pink & White</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================ -->
+        <!-- PROFILE CONTENT END -->
+        <!-- ============================================ -->
+    </div>
+    <!-- ============================================ -->
+    <!-- PROFILE CONTAINER END -->
+    <!-- ============================================ -->
+
+     
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION START -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-section">
+                <h3 class="social-title">Connect With Us!</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sailorfanclub" class="social-icon social-facebook" title="Facebook">📘</a>
+                    <a href="https://x.com/Ochibawolf" class="social-icon social-twitter" title="Twitter">🐦</a>
+                    <a href="https://www.instagram.com/sailormoon_sc/" class="social-icon social-instagram" title="Instagram">📷</a>
+                    <a href="https://www.youtube.com/@sailormoonofficialch" class="social-icon social-youtube" title="YouTube">📺</a>
+                    <a href="https://sailormoon-official.com/" class="social-icon social-website" target="_blank">🌐</a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <a href="home.htm" class="footer-link">Home</a>
+                <a href="overview.html" class="footer-link">Overview</a>
+                <a href="highlights.html" class="footer-link">Highlights</a>
+                <a href="media.html" class="footer-link">Media</a>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="newsletter-section">
+                <h4>Stay Magical! 💌</h4>
+                <p>Subscribe for Sailor Moon updates!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+                    <button type="submit" class="newsletter-button">Subscribe ✨</button>
+                </form>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright-section">
+                <p>© 2026 Sailor Moon Fan Website. All Rights Reserved.</p>
+                <p>Made with <span style="color: #ff6fb5;">💖</span> for fans worldwide</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION END -->
+    <!-- ============================================ -->
+
+    <script>
+// ============================================
+// CHARACTER DATA OBJECT
+// ============================================
+
+const characterData = {
+    moon: {
+        name: "Sailor Moon",
+        image: "profiles/moon.png",
+        origin: "Usagi Tsukino is an ordinary teenage girl who discovers she is the reincarnation of Princess Serenity. She transforms into Sailor Moon, the champion of justice, to protect Earth from evil forces. Created by Naoko Takeuchi, she is the leader of the Sailor Guardians.",
+        abilities: [
+            "Moon Prism Power transformation",
+            "Moon Tiara Action attack",
+            "Moon Princess Halation",
+            "Healing and purification powers",
+            "Silver Crystal ultimate power"
+        ],
+        stats: {
+            planet: "Moon",
+            weapon: "Moon Stick & Tiara",
+            element: "Love & Justice",
+            color: "Pink & White"
+        }
+    },
+    mercury: {
+        name: "Sailor Mercury",
+        image: "profiles/mercury.png",
+        origin: "Ami Mizuno is a brilliant student with an IQ of 300. She is the first Sailor Guardian to join Sailor Moon. As Sailor Mercury, she is the strategist of the team, using her intelligence and water-based powers to analyze enemies and support her friends.",
+        abilities: [
+            "Mercury Power transformation",
+            "Bubble Spray fog attack",
+            "Mercury Aqua Rhapsody",
+            "Shabon Spray Freezing",
+            "Computer analysis and strategy"
+        ],
+        stats: {
+            planet: "Mercury",
+            weapon: "Mini Computer",
+            element: "Water & Ice",
+            color: "Blue & Light Blue"
+        }
+    },
+    mars: {
+        name: "Sailor Mars",
+        image: "profiles/mars.png",
+        origin: "Rei Hino is a shrine maiden with spiritual powers and premonitions. As Sailor Mars, she wields the power of fire and passion. She is fierce, determined, and often acts as the voice of reason among the Sailor Guardians.",
+        abilities: [
+            "Mars Power transformation",
+            "Fire Soul attack",
+            "Burning Mandala",
+            "Mars Flame Sniper",
+            "Spiritual detection and exorcism"
+        ],
+        stats: {
+            planet: "Mars",
+            weapon: "Ofuda Scrolls",
+            element: "Fire & Passion",
+            color: "Red & Purple"
+        }
+    },
+    jupiter: {
+        name: "Sailor Jupiter",
+        image: "profiles/jupiter.png",
+        origin: "Makoto Kino is a tall, strong girl who loves cooking and plants. As Sailor Jupiter, she controls lightning and plant-based attacks. Despite her tough exterior, she has a gentle heart and dreams of love and opening a flower shop.",
+        abilities: [
+            "Jupiter Power transformation",
+            "Supreme Thunder attack",
+            "Sparkling Wide Pressure",
+            "Jupiter Oak Evolution",
+            "Superhuman strength"
+        ],
+        stats: {
+            planet: "Jupiter",
+            weapon: "Physical Strength & Thunder",
+            element: "Lightning & Wood",
+            color: "Green & Pink"
+        }
+    },
+    venus: {
+        name: "Sailor Venus",
+        image: "profiles/venus.png",
+        origin: "Minako Aino is a cheerful idol who was the first to awaken as a Sailor Guardian. As Sailor Venus, she is the Guardian of Love and Beauty, wielding the power of light and hearts. She is the leader of the Inner Guardians and protector of Princess Serenity.",
+        abilities: [
+            "Venus Power transformation",
+            "Crescent Beam attack",
+            "Venus Love-Me Chain",
+            "Rolling Heart Vibration",
+            "Leadership and tactical command"
+        ],
+        stats: {
+            planet: "Venus",
+            weapon: "Love Chain",
+            element: "Love & Light",
+            color: "Orange & Yellow"
+        }
+    },
+    chibi: {
+        name: "Sailor Chibi Moon",
+        image: "profiles/chibi_moon.png",
+        origin: "Chibiusa is the daughter of Neo-Queen Serenity and King Endymion from the 30th century. She travels back in time to find help and becomes Sailor Chibi Moon. Despite her small size, she has a brave heart and powerful lunar abilities.",
+        abilities: [
+            "Pink Moon Crystal Power",
+            "Pink Sugar Heart Attack",
+            "Twinkle Yell summoning",
+            "Rainbow Moon Heart Ache",
+            "Assisted time travel"
+        ],
+        stats: {
+            planet: "Moon (30th Century)",
+            weapon: "Pink Moon Rod",
+            element: "Love & Dreams",
+            color: "Pink & Red"
+        }
+    },
+    uranus: {
+        name: "Sailor Uranus",
+        image: "profiles/uranus.png",
+        origin: "Haruka Tenoh is a talented race car driver and the Guardian of the Sky. As Sailor Uranus, she controls wind and sky-based attacks. She is strong-willed, protective, and willing to make difficult decisions to protect the world from threats.",
+        abilities: [
+            "Uranus Planet Power, Make Up",
+            "World Shaking ground attack",
+            "Space Sword Blaster",
+            "Space Turbulence",
+            "Superhuman speed and strength"
+        ],
+        stats: {
+            planet: "Uranus",
+            weapon: "Space Sword",
+            element: "Sky & Wind",
+            color: "Navy Blue & Gold"
+        }
+    },
+    neptune: {
+        name: "Sailor Neptune",
+        image: "profiles/neptune.png",
+        origin: "Michiru Kaioh is an elegant violinist and painter with deep connection to the ocean. As Sailor Neptune, she wields the power of the sea and possesses the Deep Aqua Mirror. She is sophisticated, artistic, and devoted to her mission with Uranus.",
+        abilities: [
+            "Neptune Planet Power",
+            "Deep Submerge water attack",
+            "Submarine Reflection",
+            "Deep Aqua Mirror vision",
+            "Mirror-based visions"
+        ],
+        stats: {
+            planet: "Neptune",
+            weapon: "Deep Aqua Mirror",
+            element: "Ocean & Elegance",
+            color: "Teal & Aqua"
+        }
+    },
+    pluto: {
+        name: "Sailor Pluto",
+        image: "profiles/pluto.png",
+        origin: "Setsuna Meioh is the mysterious Guardian of Time who protects the Space-Time Door. As Sailor Pluto, she watches over the flow of time and has the power to stop time itself. She is mature, solitary, and carries the burden of protecting all timelines.",
+        abilities: [
+            "Pluto Planet Power",
+            "Dead Scream attack",
+            "Time Stop (forbidden)",
+            "Space-Time manipulation",
+            "Guardian of Space-Time Door"
+        ],
+        stats: {
+            planet: "Pluto",
+            weapon: "Garnet Rod",
+            element: "Time & Space",
+            color: "Dark Green & Black"
+        }
+    },
+    saturn: {
+        name: "Sailor Saturn",
+        image: "profiles/saturn.png",
+        origin: "Hotaru Tomoe is the Guardian of Destruction and Rebirth. As Sailor Saturn, she possesses the most destructive power among all Sailor Guardians, capable of destroying entire planets. Despite this, she is gentle and kind-hearted, awakening only in times of greatest need.",
+        abilities: [
+            "Saturn Planet Power",
+            "Death Reborn Revolution",
+            "Silence Glaive Surprise",
+            "Power of destruction and rebirth"
+        ],
+        stats: {
+            planet: "Saturn",
+            weapon: "Silence Glaive",
+            element: "Destruction & Rebirth",
+            color: "Purple & Black"
+        }
+    }
+};
+
+// ============================================
+// DOM ELEMENTS
+// ============================================
+
+const buttons = document.querySelectorAll('.character-btn');
+const characterImage = document.getElementById('characterImage');
+const characterName = document.getElementById('characterName');
+const originText = document.getElementById('originText');
+const abilitiesList = document.getElementById('abilitiesList');
+const statPlanet = document.getElementById('statPlanet');
+const statWeapon = document.getElementById('statWeapon');
+const statElement = document.getElementById('statElement');
+const statColor = document.getElementById('statColor');
+
+// ============================================
+// UPDATE PROFILE FUNCTION
+// ============================================
+
+function updateProfile(character) {
+    const data = characterData[character];
+    
+    // Update image with fade effect
+    characterImage.style.opacity = '0';
+    setTimeout(() => {
+        characterImage.src = data.image;
+        characterImage.alt = data.name;
+        characterImage.style.opacity = '1';
+    }, 200);
+    
+    // Update text content with animation
+    characterName.style.opacity = '0';
+    originText.style.opacity = '0';
+    
+    setTimeout(() => {
+        characterName.textContent = data.name;
+        originText.textContent = data.origin;
+        characterName.style.opacity = '1';
+        originText.style.opacity = '1';
+    }, 200);
+    
+    // Update abilities list
+    abilitiesList.innerHTML = '';
+    data.abilities.forEach((ability, index) => {
+        const li = document.createElement('li');
+        li.textContent = ability;
+        li.style.opacity = '0';
+        li.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1}s`;
+        abilitiesList.appendChild(li);
+    });
+    
+    // Update stats
+    setTimeout(() => {
+        statPlanet.textContent = data.stats.planet;
+        statWeapon.textContent = data.stats.weapon;
+        statElement.textContent = data.stats.element;
+        statColor.textContent = data.stats.color;
+    }, 200);
+}
+
+// ============================================
+// EVENT LISTENERS
+// ============================================
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Update profile
+        const character = button.getAttribute('data-character');
+        updateProfile(character);
+    });
+});
+
+// ============================================
+// CSS ANIMATION FOR FADE IN
+// ============================================
+
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    #characterName, #originText {
+        transition: opacity 0.3s ease;
+    }
+`;
+document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

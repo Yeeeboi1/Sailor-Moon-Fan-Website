@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="contactCss.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- FLOATING BACKGROUND -->
+    <!-- ============================================ -->
+    <div class="magical-bg" id="magicalBg"></div>
+
+    <!-- ============================================ -->
+    <!-- HEADER SECTION START -->
+    <!-- ============================================ -->
+    <header>
+        <div class="wave-top"></div>
+        <div class="header-inner">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div style="position: relative;">
+                        <div class="sparkle-container">
+                            <span class="sparkle-orbit">💫</span>
+                            <span class="sparkle-orbit">⭐</span>
+                            <span class="sparkle-orbit">✨</span>
+                        </div>
+                        <div class="moon-icon">🌙</div>
+                    </div>
+                    <h1 class="site-name">SAILOR MOON</h1>
+                </div>
+
+                <nav>
+                    <a href="home.htm" class="nav-link">🏠 Home</a>
+                    <a href="overview.html" class="nav-link">📖 Overview</a>
+                    <a href="highlights.html" class="nav-link">⭐ Highlights</a>
+                    <a href="media.html" class="nav-link">🎬 Media</a>
+                    <a href="contact.html" class="nav-link">💌 Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ============================================ -->
+    <!-- HEADER SECTION END -->
+    <!-- ============================================ -->
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION START -->
+    <!-- ============================================ -->
+    <div class="contact-container">
+        <!-- Contact Header -->
+        <div class="contact-header">
+            <div class="contact-icon">💌</div>
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-subtitle">We'd love to hear from you! Send us a message.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+            <div class="form-group">
+                <label class="form-label">Name ✨</label>
+                <input type="text" class="form-input" id="name" placeholder="Your magical name..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email 💖</label>
+                <input type="email" class="form-input" id="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Subject 🌙</label>
+                <input type="text" class="form-input" id="subject" placeholder="What's this about?" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Message 💫</label>
+                <textarea class="form-textarea" id="message" placeholder="Share your thoughts with us..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button" id="submitBtn">Send Message ✨</button>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <h3 class="info-title">Official Website</h3>
+                <p class="info-text">https://sailormoon-official.com/</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🌍</div>
+                <h3 class="info-title">Location</h3>
+                <p class="info-text">Tokyo, Japan</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">⏰</div>
+                <h3 class="info-title">Response Time</h3>
+                <p class="info-text">Within 24 hours</p>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION END -->
+    <!-- ============================================ -->
+
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION START -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-section">
+                <h3 class="social-title">Connect With Us!</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sailorfanclub" class="social-icon social-facebook" title="Facebook">📘</a>
+                    <a href="https://x.com/Ochibawolf" class="social-icon social-twitter" title="Twitter">🐦</a>
+                    <a href="https://www.instagram.com/sailormoon_sc/" class="social-icon social-instagram" title="Instagram">📷</a>
+                    <a href="https://www.youtube.com/@sailormoonofficialch" class="social-icon social-youtube" title="YouTube">📺</a>
+                    <a href="https://sailormoon-official.com/" class="social-icon social-website" target="_blank" title="Official Website">🌐</a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <a href="home.htm" class="footer-link">Home</a>
+                <a href="overview.html" class="footer-link">Overview</a>
+                <a href="highlights.html" class="footer-link">Highlights</a>
+                <a href="media.html" class="footer-link">Media</a>
+            </div>
+
+            <div class="newsletter-section">
+                <h4>Stay Magical! 💌</h4>
+                <p>Subscribe for Sailor Moon updates!</p>
+                <div class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+                    <button type="button" class="newsletter-button" id="newsletterBtn">Subscribe ✨</button>
+                </div>
+            </div>
+
+            <div class="copyright-section">
+                <p>© 2026 Sailor Moon Fan Website. All Rights Reserved.</p>
+                <p>Made with <span style="color: #ff6fb5;">💖</span> for fans worldwide</p>
+                <p style="margin-top: 0.5rem;">Sailor Moon © Naoko Takeuchi</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION END -->
+    <!-- ============================================ -->
+
+   <script>
+    // ============================================
+    // FLOATING SPARKLES ANIMATION
+    // ============================================
+    const bg = document.getElementById('magicalBg');
+    const emojis = ['✨', '⭐', '💫', '💖', '🌙'];
+
+    for (let i = 0; i < 15; i++) {
+        const span = document.createElement('span');
+        span.className = 'float-item';
+        span.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.animationDelay = Math.random() * 5 + 's';
+        bg.appendChild(span);
+    }
+
+    // ============================================
+    // CONTACT FORM SUBMISSION
+    // ============================================
+    const submitBtn = document.getElementById('submitBtn');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+
+    submitBtn.addEventListener('click', function () {
+        if (nameInput.value && emailInput.value && subjectInput.value && messageInput.value) {
+            alert("✨ Thank you for your message! We'll get back to you soon! 🌙💖");
+
+            nameInput.value = '';
+            emailInput.value = '';
+            subjectInput.value = '';
+            messageInput.value = '';
+        } else {
+            alert('⚠️ Please fill in all fields before sending! 💫');
+        }
+    });
+
+    // ============================================
+    // NEWSLETTER SUBSCRIPTION
+    // ============================================
+    const newsletterBtn = document.getElementById('newsletterBtn');
+
+    newsletterBtn.addEventListener('click', function () {
+        const emailInput = this.previousElementSibling;
+
+        if (emailInput.value) {
+            alert('✨ Thank you for subscribing! Stay magical! 💖🌙');
+            emailInput.value = '';
+        } else {
+            alert('⚠️ Please enter your email to subscribe! ✨');
+        }
+    });
+</script>
+
+</body>
+</html>
